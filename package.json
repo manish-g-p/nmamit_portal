@@ -1,0 +1,13 @@
+{
+  "name": "nmamit-mentor-mentee-portal",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "install:all": "npm ci --prefix server && npm ci --prefix client",
+    "build": "npm run build --prefix client && npm run build --prefix server",
+    "start": "node server/dist/index.js",
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix client",
+    "test": "npm test --prefix server && npm test --prefix client"
+  }
+}

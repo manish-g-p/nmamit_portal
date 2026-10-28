@@ -1,0 +1,17 @@
+# Render Blueprint: one web service runs both the API and the web app.
+services:
+  - type: web
+    name: nmamit-mentor-mentee-portal
+    runtime: node
+    plan: free              # sleeps after 15 minutes idle; use a paid plan for real use (see docs/DEPLOYMENT.md)
+    buildCommand: npm ci --include=dev --prefix client && npm run build --prefix client && npm ci --include=dev --prefix server && npm run build --prefix server
+    startCommand: node server/dist/index.js
+    healthCheckPath: /api/health
+    envVars:
+      - { key: NODE_ENV, value: production }
+      - { key: MONGODB_URI, sync: false }          # paste your Atlas connection string in the Render dashboard
+      - { key: SESSION_SECRET, generateValue: true }
+      - { key: HOD_ACCESS_CODE, generateValue: true } # HODs need this code to register; read it in the dashboard's Environment tab, or replace it with your own
+      - { key: ALLOWED_EMAIL_DOMAINS, value: "nmamit.in,nitte.edu.in" }
+      - { key: TRUST_PROXY_HOPS, value: "1" }
+      - { key: STORAGE_DRIVER, value: mongo }
