@@ -78,46 +78,51 @@ The application is built into a single Docker image (`Dockerfile`) that serves b
 - **Current deployment:** Back4app Containers (free tier), built directly from the `Dockerfile` in this repository. The required environment variables are `NODE_ENV`, `MONGODB_URI`, `SESSION_SECRET` (at least 32 characters), `HOD_ACCESS_CODE` (at least 8 characters), `ALLOWED_EMAIL_DOMAINS`, `TRUST_PROXY_HOPS=1` and `STORAGE_DRIVER=mongo`.
 - **Alternative:** Render with an optional Vercel front end, as described step by step in `docs/DEPLOYMENT.md`.
 
-## Use of AI Assistance
+## Prompts Used to Make This Project
 
-Claude (Anthropic), through Claude Code, was used as a programming assistant during the development, deployment and documentation of this project. The prompts are listed below in chronological order. They have been rewritten in formal English for clarity; their meaning has not been changed. Sensitive values, such as database connection strings, have been removed.
+Claude (Anthropic), through Claude Code, was used as a programming assistant while this project was developed, deployed and documented. The prompts below are the real prompts that were used, listed in chronological order. They have been rewritten as fluent, formal sentences without changing their meaning, and sensitive values such as database connection strings have been removed.
 
-### Initial Development
+> **Note:** The prompts used to build the first version of the application were not recorded on this computer, so they are not listed here.
 
-> *The prompts used to build the original application are not included in this list, because they were not recorded on this computer. They should be added here.*
+### Running the Project and Preparing Realistic Data (26 October 2026)
 
-### 26 October 2026: Running the Project and Preparing Realistic Data
+1. "Please run the project on my computer."
+2. "Please remove the existing data from the project and replace it with realistic data, and make the project more production-ready, because I need to demonstrate marks and other records. Use Manisha GP as the Head of the Department, Tejas BN as the faculty member, and Aditya SN, Nagaraj CE and Raghu NC as the students."
 
-1. "Please run the project."
-2. "Please remove the current data from this project, add realistic data and make the project more production-ready, as I need to demonstrate marks and other records. Use Manisha GP as the HOD, Tejas BN as the faculty member, and Aditya SN, Nagaraj CE and Raghu NC as the students."
+### Deploying on Vercel and Render (27 October 2026)
 
-### 27 October 2026: Deployment on Vercel and Render
+3. "I would like to deploy this project using Vercel for the front end and Render for the back end."
+4. "Please give me detailed, step-by-step instructions for completing this deployment."
 
-3. "I would like to deploy this project using Vercel and Render."
-4. "Please provide detailed, step-by-step instructions for this deployment."
+### Publishing the Code (28 October 2026)
 
-### 28 October 2026: Version Control
+5. "Please push this project to my GitHub repository at https://github.com/manish-g-p/nmamit_portal."
 
-5. "Please push this project to the GitHub repository https://github.com/manish-g-p/nmamit_portal."
+### Preparing the Project Report (28 October 2026)
 
-### 28 October 2026: Project Report
+6. "Please create a formal project report for this project as a Word document. Include screenshots of the web pages wherever they are relevant, and keep the report between 15 and 20 pages long. Follow the format of the sample report that I have attached, but use its images only as a reference for the layout and do not reproduce its content."
 
-6. "Please create a formal project report for this project as a Word document. Include screenshots of the web pages wherever they are relevant. The report should be longer than 15 pages and shorter than 20 pages. Follow the format of the attached sample report, using its images for reference only; do not create a report on the operating systems assignment itself."
+### Deploying on a Free Tier (28 October 2026)
 
-### 28 October 2026: Deployment on a Free Tier
+7. "How can I deploy this project on a free hosting tier without using Vercel or Render?"
+8. "Please give me the exact link that creates a web service on Koyeb from my GitHub repository, manish-g-p/nmamit_portal."
+9. "The Koyeb page does not display anything after I open the link. What should I do?"
+10. "Is this the MongoDB connection string that I should enter in the environment variables?"
+11. "The deployed application only shows the message 'not found'. Here is the runtime log; please tell me how to fix it."
+12. "The application is now working. Will this URL still work tomorrow when I present the project?"
 
-7. "How can I deploy this project on a free tier, without using Vercel or Render?"
-8. "Please give me the exact link for creating a web service from the GitHub repository manish-g-p/nmamit_portal."
-9. "The page does not display anything." *(Koyeb was not accepting new deployments, so Back4app Containers was used instead.)*
-10. "Is this the MongoDB connection string that I need to enter?" *(Connection string removed.)*
-11. "The deployed application returns 'not found'." *(The runtime log showed that `SESSION_SECRET` was missing; setting it resolved the problem.)*
-12. "The application is now working."
-13. "Will this URL continue to work tomorrow?"
+### Documenting the Project (28 October 2026)
 
-### 28 October 2026: Documentation
+13. "Please update the README of this project so that it lists the prompts I have used, and make sure that it is written in proper, formal English."
+14. "Please add a section to the README called 'Prompts Used to Make This Project', include the real prompts, and rewrite them as fluent sentences."
 
-14. "Please update the README of this project to include the prompts I have used, and ensure that it is written in proper, formal English."
+### Outcome of the Assistance
+
+- The application was run locally and loaded with realistic demonstration data.
+- The code was published to GitHub and deployed on Back4app Containers with a MongoDB Atlas database, after Koyeb proved unavailable for new deployments.
+- A 19-page formal project report with screenshots of the running application was prepared.
+- This README was rewritten in formal English.
 
 ### Responsibility
 
-I defined the requirements and constraints of the portal, reviewed the generated code and results, tested the application, and carried out the deployment. I understand the design of the system and am able to explain and modify it.
+I defined the requirements and constraints of the portal, reviewed the generated code and results, tested the application and carried out the deployment. I understand the design of the system and am able to explain and modify it.
