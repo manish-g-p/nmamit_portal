@@ -4,7 +4,7 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "rewrites": [
-    { "source": "/api/:path*", "destination": "https://nmamit-mentor-mentee-portal.onrender.com/api/:path*" },
+    { "source": "/api/:path*", "destination": "https://nmamit-mentor-mentee-portal-nebc.onrender.com/api/:path*" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }

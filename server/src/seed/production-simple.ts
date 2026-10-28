@@ -83,7 +83,7 @@ for (const studentData of studentsData) {
     admissionYear: 2023,
     currentYear: studentData.year,
     currentSemester: studentData.semester,
-    firstYearGroup: studentData.group,
+    firstYearGroup: studentData.group as 'I' | 'II',
     section: 'A',
     identityVerified: true
   });
